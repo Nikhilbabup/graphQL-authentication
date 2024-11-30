@@ -14,7 +14,9 @@ const cache = new NodeCache();
 const JWT_SECRET = "your_secret_key";
 
 export const resolvers = {
-  hello: () => "Hello World!",
+  hello: () => {
+    return "Hello World!";
+  },
 
   async getUser({ id }: { id: string }) {
     const cachedUser = cache.get(id);
