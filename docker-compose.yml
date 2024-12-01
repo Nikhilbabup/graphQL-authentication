@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    volumes:
+      # Mount host directory for data persistence
+      - /home/barry/mongodb/database:/data/db
+    ports:
+      # Expose MongoDB port
+      - 27017:27017
+    restart: unless-stopped
+    command: ["mongod", "--bind_ip", "0.0.0.0", "--auth=false"]

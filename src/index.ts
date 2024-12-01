@@ -12,13 +12,12 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-// GraphQL endpoint
 app.use(
   "/graphql",
   graphqlHTTP({
     schema: schema,
     rootValue: resolvers,
-    graphiql: true, // Enable the GraphiQL UI for testing
+    graphiql: true,
   })
 );
 
