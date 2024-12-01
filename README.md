@@ -8,6 +8,11 @@ npm install
 npm run start
 ```
 
+### To run mongodb 
+```bash
+docker compose up -d
+```
+
 ### To check graphQl server
 
 ```bash
@@ -42,7 +47,7 @@ mutation Login {
   }
 }
 ```
-
+or you can add http://localhost:4000/graphql url in postman to get all the queries of GraphQl
 ## Stay in touch
 
 - Author - [Nikhil Babu P](https://www.linkedin.com/in/nikhilbabupurakkal/)
